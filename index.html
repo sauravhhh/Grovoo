@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Grovoo - iOS Style Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1><i class="fas fa-music"></i> Grovoo</h1>
+        <div class="header-actions">
+            <!-- Header actions removed -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Artists, songs, or podcasts">
+            </div>
+        </div>
+
+        <!-- Recently Played -->
+        <div class="recently-played">
+            <h2 class="section-title">Recently Played</h2>
+            <div class="recently-played-grid">
+                <div class="recently-played-item" data-song="midnight-city">
+                    <img src="https://picsum.photos/seed/midnightcity/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Midnight City</h3>
+                        <p>M83</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="stressed-out">
+                    <img src="https://picsum.photos/seed/stressedout/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Stressed Out</h3>
+                        <p>Twenty One Pilots</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="feel-it-still">
+                    <img src="https://picsum.photos/seed/feelitstill/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Feel It Still</h3>
+                        <p>Portugal. The Man</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="believer">
+                    <img src="https://picsum.photos/seed/believer/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Believer</h3>
+                        <p>Imagine Dragons</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="shape-of-you">
+                    <img src="https://picsum.photos/seed/shapeofyou/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Shape of You</h3>
+                        <p>Ed Sheeran</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="closer">
+                    <img src="https://picsum.photos/seed/closer/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Closer</h3>
+                        <p>The Chainsmokers</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="bad-guy">
+                    <img src="https://picsum.photos/seed/badguy/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Bad Guy</h3>
+                        <p>Billie Eilish</p>
+                    </div>
+                </div>
+                <div class="recently-played-item" data-song="sunflower">
+                    <img src="https://picsum.photos/seed/sunflower/50/50.jpg" alt="Album">
+                    <div class="recently-played-item-info">
+                        <h3>Sunflower</h3>
+                        <p>Post Malone & Swae Lee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlists -->
+        <div class="playlists">
+            <h2 class="section-title">Your Playlists</h2>
+            <div class="playlists-grid">
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/playlist1/200/200.jpg" alt="Playlist">
+                    <div class="playlist-card-info">
+                        <h3>Summer Hits</h3>
+                        <p>32 songs</p>
+                    </div>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/playlist2/200/200.jpg" alt="Playlist">
+                    <div class="playlist-card-info">
+                        <h3>Workout Mix</h3>
+                        <p>24 songs</p>
+                    </div>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/playlist3/200/200.jpg" alt="Playlist">
+                    <div class="playlist-card-info">
+                        <h3>Focus Flow</h3>
+                        <p>18 songs</p>
+                    </div>
+                </div>
+                <div class="playlist-card">
+                    <img src="https://picsum.photos/seed/playlist4/200/200.jpg" alt="Playlist">
+                    <div class="playlist-card-info">
+                        <h3>Road Trip</h3>
+                        <p>45 songs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="music-player">
+        <img src="https://picsum.photos/seed/midnightcity/56/56.jpg" alt="Now Playing" class="player-album-cover">
+        <div class="player-info">
+            <h3>Midnight City</h3>
+            <p>M83</p>
+        </div>
+        <div class="player-controls">
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-pause-circle play-pause"></i>
+            <i class="fas fa-step-forward"></i>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- Now Playing Modal -->
+    <div class="now-playing-modal" id="now-playing-modal">
+        <div class="modal-header">
+            <h2>Now Playing</h2>
+            <i class="fas fa-chevron-down" id="close-modal"></i>
+        </div>
+        <div class="modal-content">
+            <img src="https://picsum.photos/seed/midnightcity/280/280.jpg" alt="Album Cover" class="modal-album-cover" id="modal-album-cover">
+            <div class="modal-song-info">
+                <h3 id="modal-song-title">Midnight City</h3>
+                <p id="modal-artist-name">M83</p>
+            </div>
+            <div class="modal-progress-container">
+                <div class="modal-progress-bar" id="modal-progress-bar"></div>
+            </div>
+            <div class="modal-time-info">
+                <span id="modal-current-time">0:00</span>
+                <span id="modal-total-time">0:00</span>
+            </div>
+            <div class="modal-controls">
+                <i class="fas fa-random"></i>
+                <i class="fas fa-step-backward"></i>
+                <i class="fas fa-pause-circle play-pause" id="modal-play-pause"></i>
+                <i class="fas fa-step-forward"></i>
+                <i class="fas fa-redo"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+        </div>
+        <div class="nav-item">
+            <i class="fas fa-list"></i>
+            <span>Your Library</span>
+        </div>
+        <div class="nav-item">
+            <img src="https://picsum.photos/seed/sauravprofile/40/40.jpg" alt="Profile" class="profile-pic">
+            <input type="file" class="profile-upload" accept="image/*">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Made with <i class="fas fa-heart"></i> by Sauravhhh
+    </div>
+
+    <!-- Hidden audio element -->
+    <audio id="audio-player"></audio>
+
+    <script src="script.js"></script>
+</body>
+  </html>
